@@ -1,0 +1,4 @@
+accelerator = "cuda"
+devices = [0, 1, 2, 3]
+strategy = "ddp_find_unused_parameters_true"
+precision = "16-mixed"

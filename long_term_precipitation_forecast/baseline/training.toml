@@ -1,0 +1,39 @@
+[stage_1]
+input_datasets = ["ssmi", "patmosx", "gridsat"]
+reference_datasets = ["daily_precip"]
+training_data_path = "ENV::{TMPDIR}/training_data"
+validation_data_path = "ENV::{TMPDIR}/validation_data"
+load_weights = "pretrained.pt"
+optimizer = "AdamW"
+batch_size = 1
+scheduler = "CosineAnnealingLR"
+scheduler_args = {"T_max"= 20}
+optimizer_args = {"lr"=1e-3}
+sequence_length = 8
+forecast = 12
+n_epochs = 20
+sample_rate = 4
+scene_size = -1
+n_data_loader_workers = 4
+require_input = true
+accumulate_grad_batches = 4
+metrics = ["CorrelationCoef", "Bias", "MSE", "PlotSamples"]
+
+[stage_2]
+input_datasets = ["ssmi", "patmosx", "gridsat"]
+reference_datasets = ["daily_precip"]
+training_data_path = "ENV::{TMPDIR}/training_data"
+validation_data_path = "ENV::{TMPDIR}/validation_data"
+optimizer = "AdamW"
+batch_size = 1
+scheduler = "CosineAnnealingLR"
+scheduler_args = {"T_max"= 20}
+optimizer_args = {"lr"=1e-3}
+sequence_length = 8
+forecast = 12
+n_epochs = 20
+sample_rate = 4
+scene_size = -1
+accumulate_grad_batches = 4
+metrics = ["CorrelationCoef", "Bias", "MSE", "PlotSamples"]
+n_data_loader_workers = 4
