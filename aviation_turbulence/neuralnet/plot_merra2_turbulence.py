@@ -5,14 +5,14 @@
 ##### START OPTIONS #####
 
 # Location of the MERRA 2 data
-mdir = '/nas/rtmp/akumar/MERRA2_78vavrs/'
+mdir = '/data/to/directory/MERRA2_78vavrs/'
 
 # AI files
-checkpoint = '/rhome/cphillip/IMPACT/DL_WeatherForcast/Turbulence_Detection/baseline/checkpoints_low/checkpoint_2024-01-25_1556.pt'
-norms_file = '/rhome/cphillip/IMPACT/DL_WeatherForcast/Turbulence_Detection/baseline/checkpoints_low/norm_mean_std_2024-01-25_1556.npz'
+checkpoint = '/data/to/directory/checkpoints_low/checkpoint_2024-01-25_1556.pt'
+norms_file = '/data/to/directory/checkpoints_low/norm_mean_std_2024-01-25_1556.npz'
 
 # Location to save the plots
-sdir = '/rhome/cphillip/IMPACT/DL_WeatherForcast/Turbulence_Detection/baseline/plots/'
+sdir = '/data/to/directory/plots/'
 
 #####  END OPTIONS  #####
 

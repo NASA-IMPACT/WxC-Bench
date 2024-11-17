@@ -6,10 +6,10 @@
 level = 'low'
 
 # Location of training data
-tpath = f'/rhome/cphillip/IMPACT/DL_WeatherForcast/Turbulence_Detection/training_data_20240126/training_data_{level}_fl.nc'
+tpath = f'/data/to/directory/training_data_{level}_fl.nc'
 
 # Location to save the model checkpoint
-sdir = f'/rhome/cphillip/IMPACT/DL_WeatherForcast/Turbulence_Detection/baseline/checkpoints_{level}/'
+sdir = f'/data/to/directory/checkpoints_{level}/'
 
 # Batch size
 batch_size = 50
