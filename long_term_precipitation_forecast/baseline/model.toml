@@ -1,0 +1,81 @@
+[architecture]
+name = "Autoregressive"
+order = 2
+time_step = 1440
+latent_dim = 512
+
+[architecture.encoder]
+
+[architecture.encoder.encoder]
+channels = [192, 256, 256]
+stage_depths = [2, 2, 2]
+block_factory = "ResNeXt"
+block_factory_args = {padding_factory="Global", normalization_factory="LayerNormFirst", activation_factory="ReLU"}
+downsampling_factors = [2, 2]
+
+[architecture.encoder.decoder]
+channels = []
+stage_depths = []
+block_factory = "ResNeXt"
+block_factory_args = {padding_factory="Global", normalization_factory="LayerNormFirst", activation_factory="ReLU"}
+
+[architecture.temporal_encoder]
+kind = "Direct"
+n_inputs = 8
+
+[architecture.temporal_encoder.encoder]
+stage_depths = [4]
+channels = [2048, 1024, 512]
+recurrence_factory = "Assimilator"
+block_factory = "ResNeXt"
+block_factory_args = {padding_factory="Global", normalization_factory="LayerNormFirst", activation_factory="ReLU"}
+
+[architecture.temporal_encoder.decoder]
+stage_depths = []
+channels = []
+
+[architecture.propagator]
+[architecture.propagator.encoder]
+channels = [512, 1024, 1024]
+stage_depths = [3, 3, 3]
+downsampling_factors = [[2, 2], [1, 2]]
+block_factory = "ResNeXt"
+block_factory_args = {padding_factory="Global", normalization_factory="LayerNormFirst", activation_factory="ReLU"}
+
+[architecture.propagator.decoder]
+channels = [1024, 512]
+stage_depths = [3, 3]
+block_factory = "ResNeXt"
+upsampling_factors = [[1, 2], [2, 2]]
+block_factory_args = {padding_factory="Global", normalization_factory="LayerNormFirst", activation_factory="ReLU"}
+
+[architecture.decoder]
+channels = [512, 256]
+stage_depths = [1, 1]
+block_factory = "ResNeXt"
+upsampling_factors = [2, 2]
+block_factory_args = {padding_factory="Global", normalization_factory="LayerNormFirst", activation_factory="ReLU"}
+
+[architecture.encoder.stem]
+depth = 1
+out_channels = 192
+
+[architecture.decoder.head]
+depth = 3
+
+[input.gridsat]
+n_features = 24
+normalize = "minmax"
+
+[input.patmosx]
+n_features = 46
+normalize = "minmax"
+
+[input.ssmi]
+n_features = 14
+normalize = "minmax"
+
+[output.precipitation]
+kind = "Quantiles"
+shape = 1
+quantiles = 32

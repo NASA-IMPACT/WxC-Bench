@@ -1,0 +1,41 @@
+name: precipitation_forecast
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - netcdf4
+  - pyyaml
+  - pooch
+  - zarr
+  - cfgrib
+  - dask
+  - pyorbital
+  - pyresample
+  - trollimage
+  - appdirs
+  - cdsapi
+  - pyarrow
+  - pyhdf
+  - h5py
+  - donfig
+  - pillow
+  - numpy
+  - pyspectral
+  - ipyleaflet
+  - trollsift
+  - xarray
+  - satpy
+  - shapely
+  - cartopy
+  - llvm-openmp
+  - ipywidgets
+  - lightning
+  - protobuf
+  - geopandas
+  - jupyter-book
+  - pip
+  - pip:
+    - "git+https://github.com/simonpf/pansat@860080b3e950458467f69bc310247b73f33d30d2"
+    - "git+https://github.com/simonpf/pytorch_retrieve@6fceb3e332d4b3fe61e1796bc2ffcb8d0d9cabb3"
+    - "git+https://github.com/simonpf/chimp@eacc2d40725af1003ddd6d01db578f9ebefd8731"
