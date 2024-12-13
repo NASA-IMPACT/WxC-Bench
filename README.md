@@ -112,7 +112,18 @@ Refer to the [README](weather_analog/README.md) file for more details.
 
 ## Citation
 **BibTeX:**
-*To be provided upon publication of the dataset.*
+```
+@misc{shinde2024wxcbenchnoveldatasetweather,
+      title={WxC-Bench: A Novel Dataset for Weather and Climate Downstream Tasks}, 
+      author={Rajat Shinde and Christopher E. Phillips and Kumar Ankur and Aman Gupta and Simon Pfreundschuh and Sujit Roy and Sheyenne Kirkland and Vishal Gaur and Amy Lin and Aditi Sheshadri and Udaysankar Nair and Manil Maskey and Rahul Ramachandran},
+      year={2024},
+      eprint={2412.02780},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2412.02780}, 
+}
+```
+
 ## Dataset Card Authors
 - Rajat Shinde
 - Christopher E. Phillips
