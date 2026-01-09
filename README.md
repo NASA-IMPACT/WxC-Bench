@@ -126,15 +126,18 @@ Refer to the [README](weather_analog/README.md) file for more details.
 
 ## Dataset Card Authors
 - Rajat Shinde
+- Kumar Ankur
 - Christopher E. Phillips
-- Sujit Roy
-- Ankur Kumar
 - Aman Gupta
 - Simon Pfreundschuh
+- Sujit Roy
 - Sheyenne Kirkland
 - Vishal Gaur
+- Venkatesh Kolluru
 - Amy Lin
+- Prajun Trital
 - Aditi Sheshadri
+- Udaysankar Nair
 - Manil Maskey
 - Rahul Ramachandran
 ## Dataset Card Contact
